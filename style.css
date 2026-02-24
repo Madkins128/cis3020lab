@@ -6,6 +6,13 @@ body {
 	padding: 0px;
 }
 
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	padding: 15px;
+}
 .yellow {
 	border-radius: 5px;
   	border-bottom: 10px solid #5d3387;
@@ -16,7 +23,6 @@ body {
 	background-color: #feba2e;
 	width: 100%;
 	padding: 0px 20px;
-	height: 140px;
 }
 
 .logo {
@@ -26,7 +32,6 @@ body {
 }
 
 .title {
-	display: flex;
 	color: #5d3387;
 	margin: 0px;
 	margin-left: 1px;
@@ -35,9 +40,10 @@ body {
 
 .titleContent {
 	display: flex;
+	flex-wrap: wrap;
   	max-width: 50%; 
     margin: 15px auto;
-  	font-size: 20px;
+  	font-size: clamp(24px, 4vw, 30px);
   	text-align: center;
 }
 
@@ -79,13 +85,13 @@ body {
   	text-decoration: none;
   	color: #5d3387;
   	background-color: white;
-  	padding: 15px 30px;
+  	padding: 15px 15px;
   	margin: 5px 32px;
   	border-radius: 5px;
-  	border: 10px solid;
+  	border: 8px solid;
   	display: inline-block;
  	font: italic bold 19px serif;
- 	font-size: 20px;
+ 	font-size: 23px;
   	text-align: center;
   	transition: background-color 0.3s;
   	cursor: pointer;
@@ -139,4 +145,3 @@ body {
     line-height: 1.6;
   	font-size: 20px;
 }
-
