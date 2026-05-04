@@ -80,8 +80,9 @@
 	<div class="QAContent">
 	<h2><span style="color: #5d3387">Want to submit your own fan art?</span></h2>
 	
-	<form action="https://madkins128.github.io/cis3020lab/" method="POST" enctype="multipart/form-data">
+	<form action="upload.php" method="POST" enctype="multipart/form-data">
 		<div class="uploadContainer">
+		<img id="preview" src="" alt="Preview will appear here" style="display:none; max-width:300px; margin-top:10px;">
 		 <label for="fan-art-upload" class="customLabel">
       <span>Click to upload your Fan Art</span>
       <input type="file" id="fan-art-upload" name="fanArt" accept="image/png, image/jpeg" hidden>
@@ -91,7 +92,17 @@
 	</form>	
 		</div><br>
 	
+<script>
+document.getElementById("fan-art-upload").addEventListener("change", function(event) {
+    const file = event.target.files[0];
+    const preview = document.getElementById("preview");
 
+    if (file) {
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = "block";
+    }
+});
+</script>
 
 </body>
 
@@ -104,7 +115,7 @@
             <img class="footerLogo" src="lakers.png" alt="lakers logo">
         </label>
         <h1><em>Myles Adkins - madkins353051@nsula.edu</em></h1>
-        <h2><em>Last Modified: 3/10/26</em></h2>
+        <h2><em>Last Modified: 4/29/26</em></h2>
         <h2><em>© 2026 Los Angles Lakers Fan Page - All rights reserved.</em></h2>
     </div>
 
